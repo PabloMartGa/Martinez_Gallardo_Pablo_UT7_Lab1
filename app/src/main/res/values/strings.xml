@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Registro de Guardias</string>
+    <string name="titulo">Consola del Oficial de Guardia</string>
+    <string name="hint_soldado">Nombre del efectivo</string>
+    <string name="etiqueta_rango">Rango militar</string>
+    <string name="rango_recluta">Recluta</string>
+    <string name="rango_capitan">Capitán</string>
+    <string name="rango_veterano">Veterano</string>
+    <string name="etiqueta_estado">En guardia</string>
+    <string name="boton_guardar">Guardar</string>
+    <string name="error_nombre_vacio">El nombre del soldado no puede estar vacío</string>
+    <string name="msg_guardado">Datos guardados correctamente</string>
+    <string name="msg_error_guardado">No se pudo confirmar el guardado</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla principal. El LinearLayout de fuera solo sirve para centrar el formulario en horizontal -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Formulario con ancho fijo (300dp): así ningún componente se estira demasiado en pantallas grandes -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título de la pantalla -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Campo de texto para el nombre del soldado (se guarda en KEY_SOLDADO).
+             minHeight 48dp = tamaño mínimo recomendado para poder tocarlo con el dedo -->
+        <EditText
+            android:id="@+id/etSoldado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/hint_soldado"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName|textCapWords"
+            android:maxLines="1"
+            android:minHeight="48dp" />
+
+        <!-- Etiqueta del grupo de rangos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/etiqueta_rango" />
+
+        <!-- Grupo de botones de radio: solo se puede elegir uno (se guarda en KEY_RANGO: 0, 1 o 2) -->
+        <RadioGroup
+            android:id="@+id/rgRango"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbRecluta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/rango_recluta" />
+
+            <RadioButton
+                android:id="@+id/rbCapitan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/rango_capitan" />
+
+            <RadioButton
+                android:id="@+id/rbVeterano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/rango_veterano" />
+        </RadioGroup>
+
+        <!-- Interruptor: activado = En Guardia (true), desactivado = En Reposo (false). Se guarda en KEY_ESTADO -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:text="@string/etiqueta_estado" />
+
+        <!-- Botón que dispara el guardado -->
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp"
+            android:text="@string/boton_guardar" />
+
+    </LinearLayout>
+</LinearLayout>
